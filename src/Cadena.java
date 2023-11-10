@@ -9,7 +9,7 @@ import java.util.*;
 public class Cadena {
 	// ArrayList to store the blocks
 	public static ArrayList<Bloque> blockchain = new ArrayList<Bloque>();
-	public static int dificultad = 7;
+	public static int dificultad = 2;
 	// Java implementation to check
 	// validity of the blockchain
 	// Function to check
@@ -56,13 +56,19 @@ public class Cadena {
 	}
 	public static void main(String[] args)
 	{
+		String cadena1 = "";
+		String cadena2 = "Bloque Génesis";
+		String cadena3 = "";
+		String cadena4 = "";
+		String cadena5 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis augue et nisi sodales dictum. Curabitur egestas aliquet nunc, ut sagittis nisl rutrum scelerisque. Cras eget vehicula orci, a gravida dui. Fusce vitae mauris quis elit condimentum vestibulum. Sed vehicula libero eu augue vulputate accumsan. Sed efficitur, magna eu lacinia vehicula, ipsum odio viverra quam, quis vehicula sapien ligula nec ex. Nulla sit amet tortor tristique, accumsan leo quis, rutrum ipsum. Phasellus luctus ligula et lectus euismod viverra. Donec dignissim nisl interdum massa vulputate ullamcorper. Ut congue mattis ante sit amet tristique. Etiam viverra quam accumsan dui tincidunt porta.";
+
 		System.out.println("Creando el bloque Genesis... ");
-		Bloque genesis = new Bloque(0,"Bloque Genesis", "00");
+		Bloque genesis = new Bloque(0, cadena5, "00");
 		addBlock(genesis);
 
 		System.out.println("--------------------------------------------");
 
-		System.out.println("Adicionando el primer bloque ");
+		/* System.out.println("Adicionando el primer bloque ");
 		Bloque bloque1 = new Bloque(1,"Primer Bloque", genesis.darHash());
 		addBlock(bloque1);
 
@@ -81,7 +87,7 @@ public class Cadena {
 		System.out.println("--------------------------------------------");
 
 		System.out.println("\n Imprimiendo la cadena resultante: ");
-		printChain();
+		printChain(); */
 
 		System.out.println("verificando validez de la cadena: " + isChainValid());
 	}

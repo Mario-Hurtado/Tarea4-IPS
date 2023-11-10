@@ -6,7 +6,7 @@ public class Cripto {
 	public static String sha256(String input)
 	{
 		try {
-			MessageDigest sha = MessageDigest.getInstance("SHA-512");
+			MessageDigest sha = MessageDigest.getInstance("SHA-256");
 			int i = 0;
 			byte[] hash = sha.digest(input.getBytes("UTF-8"));
 			// hexHash will contain
